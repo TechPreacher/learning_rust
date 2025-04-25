@@ -34,6 +34,14 @@ fn main() {
     }
     println!("The sum of the array is {}", sum);
     
+    // Simplification
+    let mut sum: i32 = 0;
+    
+    for n in 3..10 { // Using a range to iterate from 3 to 10
+        sum = add(sum, n); // Adding each element to sum
+    }
+    println!("The sum of the range is {}", sum);
+    
     // Array slicing
     let values: [i32; 5] = [1, 2, 3, 4, 5];
     let mut sum = 0;
@@ -58,3 +66,9 @@ fn main() {
     }
     println!("The sum of the vector is {}", sum);
 }
+
+// NOTES:
+// Zero-cost abstraction: Safety checks are done at compile time, not at runtime.
+// Standard library of commonly useful types available.
+// Functional-Flavored Object-Oriented Language: Rust is a multi-paradigm language.
+// Rust supports closures: functions that can capture their enclosing environment.
