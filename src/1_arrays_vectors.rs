@@ -1,3 +1,5 @@
+mod test;
+
 fn add(a: i32, b: i32) -> i32 {
     a + b // The function returns the sum of a and b
 }
@@ -11,7 +13,7 @@ fn main() {
     let b: i32 = 20;
     let sum: i32 = a + b;
     println!("The sum of {} and {} is {}", a, b, sum); // ! is used to call a macro, not a function
-    
+
     // Mutability example
     let a: i32 = 10;
     let b: i32 = 20;
@@ -24,24 +26,24 @@ fn main() {
     let b: i32 = 20;
     let sum: i32 = add(a, b);
     println!("The sum of {} and {} is {}", a, b, sum);
-    
+
     // Using an array and loop
     let values: [i32; 5] = [1, 2, 3, 4, 5];
     let mut sum: i32 = 0;
-    
+
     for n in values {
         sum = add(sum, n); // Adding each element to sum
     }
     println!("The sum of the array is {}", sum);
-    
+
     // Simplification
     let mut sum: i32 = 0;
-    
+
     for n in 3..10 { // Using a range to iterate from 3 to 10
         sum = add(sum, n); // Adding each element to sum
     }
     println!("The sum of the range is {}", sum);
-    
+
     // Array slicing
     let values: [i32; 5] = [1, 2, 3, 4, 5];
     let mut sum = 0;
@@ -53,14 +55,14 @@ fn main() {
     }
     // Note: Rust arrays are NOT growable. The size of an array must be known at compile time.
     println!("The sum of the sliced array is {}", sum);
-    
+
     // Vectors sample
     let mut values: Vec<i32> = vec![8, 30]; // Creating a vector with initial values
     let mut sum: i32 = 0;
-    
+
     values.push(1); // Adding elements to the vector
     values.push(3);
-    
+
     for n in values {
         sum = add(sum, n);
     }
