@@ -7,8 +7,8 @@ edition = "2024"
 
 [[bin]]
 name = "arrays_vectors"
-path = "src/bin/arrays_vectors.rs"
+path = "src/1_arrays_vectors.rs"
 
 [[bin]]
 name = "functional_flavored" 
-path = "src/bin/functional_flavored.rs"
+path = "src/2_functional_flavored.rs"
