@@ -67,6 +67,13 @@ fn main() {
         sum = add(sum, n);
     }
     println!("The sum of the vector is {}", sum);
+
+    // Lazy iterators
+    let sum = 0;
+    let _add = |n1:i32, n2:i32| n1 + n2; // A closure that takes two parameters and returns their sum. Types are inferred.
+    let _numbers = (3..10)
+        .inspect(|n| println!("n = {}", n)); // Inspect each number.
+    println!("The sum of the range is {}", sum);
 }
 
 // NOTES:
@@ -74,3 +81,4 @@ fn main() {
 // Standard library of commonly useful types available.
 // Functional-Flavored Object-Oriented Language: Rust is a multi-paradigm language.
 // Rust supports closures: functions that can capture their enclosing environment.
+// Adding a _ to a variable like _myvar signals that the variable is not used (on purpose).

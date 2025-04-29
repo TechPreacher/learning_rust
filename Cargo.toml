@@ -4,3 +4,11 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+
+[[bin]]
+name = "arrays_vectors"
+path = "src/bin/arrays_vectors.rs"
+
+[[bin]]
+name = "functional_flavored" 
+path = "src/bin/functional_flavored.rs"
