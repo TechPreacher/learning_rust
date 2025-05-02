@@ -17,6 +17,14 @@ impl Accumulator {
     {
         self.sum
     }
+
+    fn add_new_instance(self, increment: i32) -> Self // Method
+    {
+        Self {
+            // Create a new instance of the Accumulator struct
+            sum: self.sum + increment
+        }
+    }
 }
 
 fn main() {
@@ -34,7 +42,14 @@ fn main() {
 
     // Using the get method
     let acc = Accumulator::new(3);
-    println!("acc = {:?}", acc.get()); // Print the instance of the Accumulator struct using the get method
+    println!("acc = {}", acc.get()); // Print the instance of the Accumulator struct using the get method
+
+    // Using the add_new_instance method
+    let mut acc = Accumulator::new(4);
+    for i in 0..10{
+        acc = acc.add_new_instance(i); // Create a new instance of the Accumulator struct using the add_new_instance method
+    };
+    println!("acc = {}", acc.get()); // Print the instance of the Accumulator struct using the get method
 }
 
 // NOTES:
